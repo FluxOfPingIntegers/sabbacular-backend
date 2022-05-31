@@ -1,5 +1,5 @@
 # Sabbacular Back-end
-This is a RESTful API backend for the vacation planning app Sabbacular.  It employs Rails to serve JSON to the Sabbacular front end.  This section of the app will utilize the YELP API to collect information on local businesses, and Google Oauth for user authentication.  The App will allow Users to plan a vacation using a budget, range of dates, and planned events.
+This is a RESTful API backend for the vacation planning app Sabbacular.  It employs Rails to serve JSON to the [Sabbacular front end](https://github.com/FluxOfPingIntegers/sabbacular-frontend).  This section of the app will utilize the YELP API to collect information on local businesses, and Google Oauth for user authentication.  The App will allow Users to plan a vacation using a budget, range of dates, and planned events.
 
 ## Getting Started
 * Step 1: within your terminal inside the main branch for this project within VS code type the following and hit enter:
@@ -20,7 +20,7 @@ this populates your database, then enter the following to start the server on yo
 rails s
 ```
 If you wish to stop the server at any type press CTRL+C on your keyboard within terminal.
-* Step 3: Go to the instructions found here to start utilizing this app.
+* Step 3: Go to the instructions found [here](https://github.com/FluxOfPingIntegers/sabbacular-frontend) to start utilizing this app.
 ## Installation
 • First You will need developer software, I used Visual Studio Code. Depending on your operating system you should follow these instructions: [Windows](https://code.visualstudio.com/docs/setup/windows) -OR- [macOS](https://code.visualstudio.com/docs/setup/mac) -OR- [Linux](https://code.visualstudio.com/docs/setup/linux)
 
