@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'trips/create'
+  get 'trips/show'
+  get 'trips/update'
+  get 'trips/destroy'
+  get 'events/create'
+  get 'events/show'
+  get 'events/update'
+  get 'events/destroy'
   get 'days/create'
   get 'days/show'
   get 'days/update'
