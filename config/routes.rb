@@ -1,23 +1,18 @@
 Rails.application.routes.draw do
-  get 'trips/create'
-  get 'trips/show'
-  get 'trips/update'
-  get 'trips/destroy'
-  get 'events/create'
-  get 'events/show'
-  get 'events/update'
-  get 'events/destroy'
-  get 'days/create'
-  get 'days/show'
-  get 'days/update'
-  get 'days/destroy'
-  get 'users/new'
-  get 'users/create'
-  get 'users/update'
-  get 'users/destroy'
+
+  resources :vacations, only: [:create, :show, :update, :destroy]
+
+  resources :trips, only: [:create, :show, :update, :destroy]
+
+  resources :events, only: [:create, :show, :update, :destroy]
+
+  resources :days, only: [:create, :show, :update, :destroy]
+
+  resources :users, only: [:create, :show, :update, :destroy]
+
   get 'session/create'
   get 'session/google'
-  get 'session/destroy'
+  delete "sessions", to: "session#destroy", as: :logout
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
