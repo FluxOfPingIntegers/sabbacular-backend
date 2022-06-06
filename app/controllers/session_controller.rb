@@ -1,11 +1,20 @@
 class SessionController < ApplicationController
   def create
+    user = User.find_by_username(params[:username])
+    if user && user.authenticate(params[:password])
+      vendor = (!!user.vendor ? user.vendor.display : false)
+      render json: {user: user, token: encode_token(user.id), vendor: vendor}
+    else
+      render json: user.errors.full_messages, status: :forbidden
+    end
   end
 
   def google
+    byebug
   end
 
   def destroy
+    byebug
   end
 
   private
