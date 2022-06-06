@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::API
 
-    helper_method :current_user, :logged_in?, :set_user
-
     def current_user
       if session[:user_id]
         user = User.find(session[:user_id])

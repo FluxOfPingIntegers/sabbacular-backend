@@ -9,6 +9,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    user = User.find(params[:id])
+    if user == current_user
+      render json: {user: user}
+    else
+      render json: {errors: "Unauthorized User Query"}, status: :forbidden
+    end
+  end
+
   def update
     byebug
   end
