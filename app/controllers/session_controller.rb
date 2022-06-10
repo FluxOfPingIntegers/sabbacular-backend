@@ -1,5 +1,6 @@
 class SessionController < ApplicationController
   def create
+    byebug
     user = User.find_by_username(params[:username])
     if user && user.authenticate(params[:password])
       vendor = (!!user.vendor ? user.vendor.display : false)

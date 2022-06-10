@@ -1,6 +1,6 @@
 class DaysController < ApplicationController
   def create
-    user = logged_in_user
+    user = current_user
     byebug
   end
 
