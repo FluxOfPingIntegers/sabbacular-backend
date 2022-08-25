@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def create
+    byebug
     user = User.new(user_params)
     if user.save
       render json: {user: user, token: encode_token(user.id), vendor: (!!user.vendor ? user.vendor.display : false)}
